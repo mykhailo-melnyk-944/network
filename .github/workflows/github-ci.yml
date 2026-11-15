@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [cv2, cv3, '4']
+        project: [cv2, cv3, '4', cv5]
     defaults:
       run:
         working-directory: ${{ matrix.project }}

@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+    id 'com.gradleup.shadow' version '9.6.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.jsoup
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'utb.fai.App'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'utb.fai.App'
+    }
+}
+
+test {
+    exclude '**/*'
+}
